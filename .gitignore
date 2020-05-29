@@ -8,9 +8,10 @@ tests/**/data/
 tests/.pytest_cache/
 archived/
 .DS_STORE
-
+build/
+GeneXpress.egg-info/
 # ignore some build folders etc
-
+.idea/
 
 ###
 # pycharm stuff
