@@ -30,7 +30,7 @@ class LimmaDiffEx:
         return limma.lmFit(self.data, self.model)
 
     def run_ebayes(self):
-        self.ebayes = limma.ebayes(self.contrast_fit)
+        self.ebayes = limma.eBayes(self.contrast_fit)
         return self.ebayes
 
     def make_contrasts(self, experimental: list, control: str, comps=None):
@@ -49,7 +49,7 @@ class LimmaDiffEx:
     def run_toptable(self, sort_by, n=None, coef=1):
         if n is None:
             n = len(self.data.index)
-        tops = limma.topTable(self.ebayes, adjust='fdr', sort_by=sort_by, n=n, coef=coef)
+        tops = limma.topTable(self.ebayes, adjust='BH', sort_by=sort_by, n=n, coef=coef)
         return tops
     # def make_model_matrix(self, intercept=True):
     #     if intercept:
