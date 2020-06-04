@@ -4,8 +4,8 @@ setup(
     name='GeneXpress',
     version='0.0.1.3',
     packages=['VizTools', 'AnalysisTools', 'ExpressionTools'],
-    data_files=[('AnalysisTools', ['/gsea_databases/all_curated_genesets.gmt', '/gsea_databases/immunological_signatures.gmt',
-                                   '/gsea_databases/msigdb_hallmarks.gmt', '/gsea_databases/reactome_canonical_pathways.gmt'])],
+    data_files=[('AnalysisTools', ['AnalysisTools/gsea_databases/all_curated_genesets.gmt', 'AnalysisTools/gsea_databases/immunological_signatures.gmt',
+                                   'AnalysisTools/gsea_databases/msigdb_hallmarks.gmt', 'AnalysisTools/gsea_databases/reactome_canonical_pathways.gmt'])],
 
     url='',
     license='GNU Affero General Public License v3.0',
