@@ -23,6 +23,7 @@ FROM rocker/binder:latest
 # ## Become normal user again
 # USER ${NB_USER}
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
+export PATH=~/miniconda/bin:$PATH
 RUN conda init
 # RUN bash ~/miniconda.sh -b -p $HOME/miniconda
 ADD environment.yml /tmp/environment.yml
