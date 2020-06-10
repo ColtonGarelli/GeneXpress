@@ -22,10 +22,14 @@ FROM rocker/binder:latest
 #
 # ## Become normal user again
 # USER ${NB_USER}
+
+
+# http://www.science.smith.edu/dftwiki/index.php/Tutorial:_Docker_Anaconda_Python_--_4
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
+RUN echo ls -d
 RUN bash Anaconda3-5.0.1-Linux-x86_64.sh -b
 RUN rm Anaconda3-5.0.1-Linux-x86_64.sh
-RUN echo ls -d
+
 RUN export PATH=~/miniconda3/bin:$PATH
 RUN conda init
 # RUN bash ~/miniconda.sh -b -p $HOME/miniconda
