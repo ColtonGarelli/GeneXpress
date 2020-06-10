@@ -22,10 +22,11 @@
 #
 # ## Become normal user again
 # USER ${NB_USER}
-
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
+RUN bash ~/miniconda.sh -b -p $HOME/miniconda
 FROM rocker/binder:latest
 ADD environment.yml /tmp/environment.yml
-RUN jupyter repo2docker https://github.com/ColtonGarelli/GeneXpress conda env export -n root
+RUN conda env create --file /tmp/environment.yml
 
 RUN echo "source activate env" > ~/.bashrc
 ENV PATH /opt/conda/envs/env/bin:$PATH
