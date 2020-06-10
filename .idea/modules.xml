@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../Xpression/.idea/Xpression.iml" filepath="$PROJECT_DIR$/../Xpression/.idea/Xpression.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GeneXpress.iml" filepath="$PROJECT_DIR$/.idea/GeneXpress.iml" />
     </modules>
   </component>
 </project>

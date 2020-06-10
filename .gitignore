@@ -84,3 +84,8 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
+#Dockerfile
+VizTools/__pycache__/
+__pycache__/
+.ipynb_checkpoints/
+CXCR6_lupus_analysis.ipynb

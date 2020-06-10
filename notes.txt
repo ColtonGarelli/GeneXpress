@@ -1,0 +1,3 @@
+jupyter repo2docker https://github.com/binder-examples/conda conda env export -n root to export a repo so it works on binder
+
+only keep version and package name: conda env export | cut -f -2 -d "=" | grep -v "prefix" > environment.yml
