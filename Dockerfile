@@ -26,7 +26,7 @@ FROM rocker/binder:latest
 
 # http://www.science.smith.edu/dftwiki/index.php/Tutorial:_Docker_Anaconda_Python_--_4
 RUN mkdir conda_dir
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh -P conda_dir
 RUN ls -d
 RUN bash Anaconda3-5.0.1-Linux-x86_64.sh -b
 RUN rm Anaconda3-5.0.1-Linux-x86_64.sh
