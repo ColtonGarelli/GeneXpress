@@ -23,6 +23,8 @@ FROM rocker/binder:latest
 # ## Become normal user again
 # USER ${NB_USER}
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
+RUN bash Anaconda3-5.0.1-Linux-x86_64.sh -b
+RUN rm Anaconda3-5.0.1-Linux-x86_64.sh
 RUN echo ls -d
 RUN export PATH=~/miniconda3/bin:$PATH
 RUN conda init
